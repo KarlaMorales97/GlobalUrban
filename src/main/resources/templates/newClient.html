@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New Client - Global Urban Strategies Inc.</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <link th:href="@{/css/styleAdmin.css}" rel="stylesheet" />
+    <link th:href="@{/css/menu.css}" rel="stylesheet" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        $(document).ready(function (){
+            $('body').on('click', 'button.confirm', function(e){
+                alert('CLICK!');
+            });
+
+        });
+    </script>
+</head>
+<body class="newClient">
+    <div class="newClientConfirm">
+        <!-FORM FOR ADD A NEW CLIENT->
+        <h1>ADD NEW CLIENT</h1><br><br><br>
+        <form action="#" th:action="@{/newClient}" method="POST" modelAttribute="client">
+            <input class="Login" style="background-color:transparent;" placeholder="User name Client" type="text" name="userClient" path="userClient"/><br>
+            <br><br>
+            <input class="Login" style="background-color:transparent;" placeholder="Password Client" type="password" name="passClient" path="passClient"/><br>
+
+            <br><br>
+            <input type="submit" class="save" value=""><br><br>
+        </form>
+        <!- END->
+    </div>
+</body>
+
+</html>

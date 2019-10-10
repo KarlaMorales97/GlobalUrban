@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home - Global Urban</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <link th:href="@{/css/menu.css}" rel="stylesheet" />
+
+    <link rel="stylesheet" th:href="@{/css/video-js.css}">
+    <script th:src="@{/css/js/video.js}"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.js"></script>
+</head>
+<body id="veterans">
+    <form action="#" th:action="@{/GlobalUrban/#aboutUs} ">
+        <input class="Back" type="submit" value="" />
+    </form>
+    <table id="certificationTable" style="width:100%" align="center">
+        <tr>
+            <td style="width:60%">
+                <main id="veteransMain">
+                    <div class="contentVideo">
+                        <video class="fm-video video-js vjs-16-9 vjs-big-play-centered" data-setup="{}" controls id="fm-video">
+                            <source src="/css/video/Veteranos_video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </main>
+            </td>
+            <td style="width:40%">
+                <img id="titleV" src="/css/images/Aboutus-Veterans-title.png"/>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        var reproductor = videojs('fm-video', {
+            fluid: true
+        });
+    </script>
+</body>
+</html>

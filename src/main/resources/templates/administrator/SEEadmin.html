@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html class="SEE" lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home - Global Urban</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <link th:href="@{/css/styleAdmin.css}" rel="stylesheet" />
+
+    <link th:href="@{/css/services.css}" rel="stylesheet" />
+    <link th:href="@{/css/menu.css}" rel="stylesheet" />
+
+    <link rel="stylesheet" th:href="@{/css/video-js.css}">
+    <script th:src="@{/css/js/video.js}"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.js"></script>
+</head>
+<body class="SEE">
+<form action="#" th:action="@{/GlobalUrban/#services} ">
+    <input class="Back" type="submit" value="" />
+</form>
+
+<img id="SEEtitle" src="/css/images/services/SEEtitle.png"/>
+
+<table id="SEEtable" class="woPadding" style="width:90%" align="center">
+    <tr>
+        <td width="50%" rowspan="3">
+            <li class="admin" th:each="inf : ${inf}">
+                <form action="#" th:action="@{/infoEdit} " method="POST" modelAttribute="information">
+
+                    <textarea th:text="${inf.welcome}" style="display:none;" name="welcome" th:inline="text"></textarea><br>
+                    <textarea th:text="${inf.aboutus}" style="display:none;" name="aboutus" th:inline="text"></textarea><br>
+                    <textarea th:text="${inf.introservice}" style="display:none;" name="introservice" th:inline="text"></textarea><br>
+                    <textarea th:text="${inf.grantwriadmin}" style="display:none;" name="grantwriadmin" th:inline="text"></textarea><br>
+                    <textarea th:text="${inf.graphicdesign}" style="display:none;" name="graphicdesign" th:inline="text"></textarea><br>
+                    <textarea th:text="${inf.graphicdesignTwo}" style="display:none;" name="graphicdesignTwo" th:inline="text"></textarea><br>
+                    <textarea th:text="${inf.goverenti}" style="display:none;" name="goverenti" th:inline="text"></textarea><br>
+                    <textarea th:text="${inf.goverenti2}" style="display:none;" name="goverenti2" th:inline="text"></textarea><br>
+                    <!--<textarea th:text="${inf.outeducation}" style="display:none;" name="outeducation" th:inline="text"></textarea><br>-->
+                    <textarea th:text="${inf.introportfolio}" style="display:none;" name="introportfolio" th:inline="text"></textarea>
+
+                    <textarea th:text="${inf.gaewwu}" style="display:none;" name="gaewwu" th:inline="text"></textarea>
+                    <textarea th:text="${inf.gdmwwu}" style="display:none;" name="gdmwwu" th:inline="text"></textarea>
+                    <textarea th:text="${inf.seewwu}" style="display:none;" name="seewwu" th:inline="text"></textarea>
+                    <textarea th:text="${inf.gwawwu}" style="display:none;" name="gwawwu" th:inline="text"></textarea>
+
+                    <textarea id="SEETa" th:text="${inf.outeducation}" type="text" name="outeducation" th:inline="text"></textarea><br>
+                    <input type="submit" class="save" value="" />
+                </form>
+            </li>
+        </td>
+        <td width="50%" rowspan="3">
+            <li class="admin" th:each="inf : ${inf}">
+                <form action="#" th:action="@{/infoEdit} " method="POST" modelAttribute="information">
+
+                    <textarea th:text="${inf.welcome}" style="display:none;" name="welcome" th:inline="text"></textarea><br>
+                    <textarea th:text="${inf.aboutus}" style="display:none;" name="aboutus" th:inline="text"></textarea><br>
+                    <textarea th:text="${inf.introservice}" style="display:none;" name="introservice" th:inline="text"></textarea><br>
+                    <textarea th:text="${inf.grantwriadmin}" style="display:none;" name="grantwriadmin" th:inline="text"></textarea><br>
+                    <textarea th:text="${inf.graphicdesign}" style="display:none;" name="graphicdesign" th:inline="text"></textarea><br>
+                    <!-- <textarea th:text="${inf.graphicdesignTwo}" style="display:none;" name="graphicdesignTwo" th:inline="text"></textarea><br>-->
+                    <textarea th:text="${inf.goverenti}" style="display:none;" name="goverenti" th:inline="text"></textarea><br>
+                    <textarea th:text="${inf.goverenti2}" style="display:none;" name="goverenti2" th:inline="text"></textarea><br>
+                    <textarea th:text="${inf.outeducation}" style="display:none;" name="outeducation" th:inline="text"></textarea><br>
+                    <textarea th:text="${inf.introportfolio}" style="display:none;" name="introportfolio" th:inline="text"></textarea>
+
+                    <textarea th:text="${inf.gaewwu}" style="display:none;" name="gaewwu" th:inline="text"></textarea>
+                    <textarea th:text="${inf.gdmwwu}" style="display:none;" name="gdmwwu" th:inline="text"></textarea>
+                    <textarea th:text="${inf.seewwu}" style="display:none;" name="seewwu" th:inline="text"></textarea>
+                    <textarea th:text="${inf.gwawwu}" style="display:none;" name="gwawwu" th:inline="text"></textarea>
+
+                    <textarea id="SEE2Ta" th:text="${inf.graphicdesignTwo}" type="text" name="graphicdesignTwo" th:inline="text"></textarea><br>
+                    <input type="submit" class="save" value="" />
+                </form>
+            </li>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

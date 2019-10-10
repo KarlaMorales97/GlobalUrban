@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="GAE" lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home - Global Urban</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+
+    <link th:href="@{/css/services.css}" rel="stylesheet" />
+    <link th:href="@{/css/menu.css}" rel="stylesheet" />
+
+    <link rel="stylesheet" th:href="@{/css/video-js.css}">
+    <script th:src="@{/css/js/video.js}"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.js"></script>
+</head>
+<body class="GAE">
+    <form action="#" th:action="@{/GlobalUrban/#services} ">
+        <input class="Back" type="submit" value="" />
+    </form>
+
+    <img id="GAEtitle" src="/css/images/services/GAEtitle.png"/>
+
+    <div id="GAEtext2">
+        <pre><p th:each="i: ${inf}" th:text="${i.goverti2}"></p></pre>
+    </div>
+
+    <table class="woPadding" style="width:90%" align="center">
+        <tr>
+            <td width="15%">
+                <img id="GAEimg2" src="/css/images/services/GAE2.png">
+            </td>
+            <td width="85%" rowspan="2">
+                <div id="GAEtext">
+                    <pre><p th:each="i: ${inf}" th:text="${i.goverenti}"></p></pre>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td width="15%">
+                <img id="GAEimg1" src="/css/images/services/GAE1.png">
+            </td>
+        </tr>
+    </table>
+    <form action="#" th:action="@{/GAE/gaewwu}">
+        <p><input class="next" id="nextgwawwu" type="submit" value=""/>
+    </form>
+</body>
+</html>

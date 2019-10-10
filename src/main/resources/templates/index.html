@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home - Global Urban</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <link th:href="@{/css/menu.css}" rel="stylesheet" />
+
+    <link rel="stylesheet" th:href="@{/css/video-js.css}">
+    <script th:src="@{/css/js/video.js}"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.js"></script>
+</head>
+<body class="fix">
+    <nav>
+        <a href="#home"><img src="/css/images/LogoGUS-04-02.png"/></a>
+        <ul>
+            <li data-menuanchor="welcome" class="active">
+                <a href="#welcome">WELCOME</a>
+            </li>
+            <li data-menuanchor="aboutUs">
+                <a href="#aboutUs">ABOUT US</a>
+            </li>
+            <li data-menuanchor="services">
+                <a href="#services">SERVICES</a>
+            </li >
+            <li data-menuanchor="portfolio">
+                <a href="#portfolio">PORTFOLIO</a>
+            </li>
+            <li data-menuanchor="contactUs">
+                <a href="#contactUs">CONTACT US</a>
+            </li>
+        </ul>
+    </nav>
+    <!--SLIDER-->
+    <div id="fullpage">
+        <!--SLIDE 1/HOME-->
+        <video autoplay muted loop id="videoHome">
+            <source src="/css/video/HomeVideo.mp4" type="video/mp4">
+        </video>
+
+        <nav>
+            <a href="#home"><img src="/css/images/LogoGUS-04-02.png"/></a>
+
+            <ul>
+                <li data-menuanchor="welcome" class="active">
+                    <a href="#welcome">WELCOME</a>
+                </li>
+                <li data-menuanchor="aboutUs">
+                    <a href="#aboutUs">ABOUT US</a>
+                </li>
+                <li data-menuanchor="services">
+                    <a href="#services">SERVICES</a>
+                </li >
+                <li data-menuanchor="portfolio">
+                    <a href="#portfolio">PORTFOLIO</a>
+                </li>
+                <li data-menuanchor="contactUs">
+                    <a href="#contactUs">CONTACT US</a>
+                </li>
+                <li>
+                    <form action="#" th:action="@{/userLogin}">
+                        <p><input class="login-button" type="submit" value=""/>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="section " id="section0">
+
+        </div>
+        <!--SLIDE 2/WELCOME-->
+        <div class="section " id="section1">
+            <div class="welcomeInf" style="word-wrap: break-word;">
+                <pre><p th:each="i: ${inf}" th:text="${i.welcome}"></p></pre>
+            </div>
+        </div>
+        <!--SLIDE 3/ABOUT US-->
+        <div class="section " id="section2">
+
+            <table style="width:90%" align="center">
+                <tr>
+                    <td width="80%">
+                        <div class="allText">
+                            <pre class="content" id="aboutus">
+                                <p style="text-align:justify" th:each="i: ${inf}" th:text="${i.aboutus}"></p>
+                            </pre>
+                        </div>
+                    </td>
+                    <td width="20%">
+                        <form action="#" th:action="@{/aboutUsV}">
+                            <p><input class="next" type="submit" value=""/>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!--SLIDE 4 / SERVICES-->
+        <div class="section " id="section3">
+            <table style="width:90%" align="center">
+                <tr>
+                    <td width="50%">
+                        <table id="servicesTable">
+                            <tr>
+                                <td width="50%" style="border-bottom: 0px ridge  transparent;border-right: 20px ridge  transparent;">
+                                      <form action="#" th:action="@{/GWA}">
+                                          <p><input id="servicesImg1" type="submit" value=""/>
+                                      </form>
+                                </td>
+                                <td width="50%" style="border-bottom: 0px ridge  transparent;border-left: 20px ridge  transparent;">
+                                    <form action="#" th:action="@{/GDM}">
+                                        <p><input id="servicesImg2" type="submit" value=""/>
+                                    </form>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="50%" style="border-bottom: 0px ridge  transparent;border-right: 20px ridge  transparent;">
+                                    <form action="#" th:action="@{/SEE}">
+                                        <p><input id="servicesImg3" type="submit" value=""/>
+                                    </form>
+                                </td>
+                                <td width="50%" style="border-bottom: 0px ridge  transparent;border-left: 20px ridge  transparent;">
+                                    <form action="#" th:action="@{/GAE}">
+                                        <p><input id="servicesImg4" type="submit" value=""/>
+                                    </form>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td width="50%; height: 60px">
+                        <img id="servicesSlides" src="/css/images/ServicesSlide.jpg"/>
+                        <pre><p id="serviceText" th:each="i: ${inf}" th:text="${i.introservice}"></p></pre>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!--SLIDE 5/ PORTFOLIO-->
+        <div class="section " id="section4">
+            <table style="width:90%" align="center">
+                <tr>
+                    <td style="width:50%">
+                        <img  id="portfolioTitle" src="/css/images/PortfolioTitle.png"/>
+                    </td>
+                    <td style="width:50%">
+                        <pre><p class="right" th:each="i: ${inf}" th:text="${i.introservice}"></p></pre>
+                    </td>
+                </tr>
+            </table>
+            <div id="portfolioTitl">
+                <table id="portfolioTable" style="width:100%" align="center">
+                    <tr>
+                        <td style="width:20%">
+                            <!--<img  class="P123" src="/css/images/1P.png"/>-->
+                            <form action="#" th:action="@{/portfolioSlide/#policy} ">
+                                <input id="P1234" type="submit" value="" />
+                            </form>
+                        </td>
+                        <td style="width:20%">
+                            <form action="#" th:action="@{/portfolioSlide/#events} ">
+                                <input id="P1231" type="submit" value="" />
+                            </form>
+                        </td>
+                        <td style="width:20%">
+                            <form action="#" th:action="@{/portfolioSlide/#corporate} ">
+                                <input id="P1232" type="submit" value="" />
+                            </form>
+                        </td>
+                        <td style="width:20%">
+                            <form action="#" th:action="@{/portfolioSlide/#municipality} ">
+                                <input id="P1233" type="submit" value="" />
+                            </form>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!--SLIDE 6/ CONTACT US-->
+        <div class="section " id="section5">
+
+            <div class="contact-form">
+                <form th:action="@{/send}"  method="post">
+                    <label for="name">Full Name</label><br><br>
+                    <input name="name" type="email" id="name" placeholder="" style="background-color:transparent;border:0;border-bottom:1px solid white" required>
+                    <br><br>
+                    <label for="email">Your email</label><br><br>
+                    <input name="email" type="email" id="email" placeholder="" style="background-color:transparent;border:0;border-bottom:1px solid white" required>
+                    <br><br>
+                    <label for="phone">Phone:</label><br>
+                    <input name="phone" type="text" id="phone" placeholder="" style="background-color:transparent;border:0;border-bottom:1px solid white">
+                    <br><br>
+                    <label for="message">Message</label><br>
+                    <textarea name="content" class="form-control" id="message"></textarea>
+                    <br>
+                    <button type="submit" class="send"></button>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        $(function () {
+            $('#fullpage').fullpage({
+                menu: 'nav',
+                anchors: ['home','welcome','aboutUs', 'services', 'portfolio', 'contactUs'],
+                scrollBar: false,
+                navigation: true,
+                navigationPosition: 'right',
+                navigationTooltips: ['HOME','WELCOME','ABOUT US','SERVICES','PORTFOLIO','CONTACT US'],
+                slidesNavigation: true
+            });
+        });
+
+        //$(".GWelcome").val().replace(/\n/g, "<br>");
+
+    </script>
+</body>
+</html>

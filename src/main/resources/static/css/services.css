@@ -1,0 +1,135 @@
+html,body.notPadding{
+    padding-top: 0;
+    background-image: url("images/services/gwa.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+html,body.GDM{
+    padding-top: 0;
+    background-image: url("images/services/GDf.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+html,body.SEE{
+    padding-top: 0;
+    background-image: url("images/services/see.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+html,body.GAE{
+    padding-top: 0;
+    background-image: url("images/services/gae.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*GWA*/
+img#GWAtitle{
+    padding: 2%;
+    width: 800px;
+    height: 140px;
+    margin-left: 5rem;
+}
+img#icon1GWA{
+    width: 80px;
+    height: 100px;
+    margin-left: 5rem;
+}
+img#icon2GWA{
+    width: 80px;
+    height: 100px;
+    margin-left: 5rem;
+}
+img#whiteSqrtGWA{
+    margin-top: auto;
+    width: 50%;
+    height: 150px;
+}
+/*GDM*/
+img#GDtitle{
+    padding: 2%;
+    width: 350px;
+    height: 150px;
+    margin-left: 5rem;
+}
+div#GDMtext{
+    padding-left: 7rem;
+    padding-top: 2rem;
+}
+/*SEE*/
+img#SEEtitle{
+    padding: 2%;
+    width: 600px;
+    height: 110px;
+    margin-left: 0.5rem;
+}
+div#SEEtext{
+    padding-top: 2rem;
+}
+div#SEE2text{
+    padding-left: 3rem;
+    padding-top: 2rem;
+}
+table#SEEtable{
+    margin-top: -10rem;
+}
+/*GAE*/
+
+img#GAEtitle{
+    padding: 2%;
+    width: 450px;
+    height: 160px;
+    margin-left: 3rem;
+}
+img#GAEimg2{
+    padding-top: 2rem;
+    width: 90px;
+    height: 60px;
+    padding-left: 2rem;
+}
+img#GAEimg1{
+    padding-top: 2rem;
+    width: 100px;
+    height: 110px;
+    padding-left: 2rem;
+}
+div#GAEtext{
+}
+div#GAEtext2{
+    display: flex;
+    box-sizing: border-box;
+    width: 30%;
+    margin-left: auto;
+    margin-top: -10rem;
+    margin-right: 10%;
+}
+table#GAEtable{
+}
+div#gwawwu{
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    flex-flow: column;
+    margin-left: auto;
+    margin-right: auto;
+    background: orange;
+    width: 700px;
+    height: 50%;
+}
+input#nextgwawwu{
+    margin-right: 2%;
+}
+/*GWAwwu*/
+
+img#GWAwwutitle{
+    display: flex;
+    margin: 5rem;
+    width: 350px;
+    height: 250px;
+}

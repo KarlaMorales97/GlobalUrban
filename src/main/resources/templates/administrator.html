@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Global Urban</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <link th:href="@{/css/menu.css}" rel="stylesheet" />
+</head>
+<body class="login">
+    <nav>
+        <a href="#home"><img src="/css/images/LogoGUS-04-02.png"/></a>
+
+        <ul>
+            <li data-menuanchor="home" class="active">
+                <a href="#">HOME</a>
+            </li>
+            <li data-menuanchor="aboutUs">
+                <a href="#">ABOUT US</a>
+            </li>
+            <li data-menuanchor="services">
+                <a href="#">SERVICES</a>
+            </li >
+            <li data-menuanchor="portfolio">
+                <a href="#">PORTFOLIO</a>
+            </li>
+            <li data-menuanchor="contactUs">
+                <a href="#">CONTACT US</a>
+            </li>
+        </ul>
+    </nav>
+
+    <form action="#" th:action="@{/GlobalUrban/} ">
+        <input class="Back" type="submit" value="" />
+    </form>
+
+    <table style="width:100%">
+        <tr>
+            <th><img src="/css/images/Admin.jpg"/></th>
+            <th><img src="/css/images/Client.jpg"/></th>
+        </tr>
+        <tr align="center">
+            <td width="50%" style="height: 400px; border-right: 1px ridge white;"><form action="#" th:action="@{/adminLogin}" method="POST" modelAttribute="administrator">
+                <input class="Login" style="background-color:transparent;" placeholder="Username" type="text" name="unadmin" path="unadmin"/><br>
+                <br><br>
+                <input class="Login" style="background-color:transparent;" placeholder="Password" type="password" name="passadmin" path="passadmin"/><br>
+
+                <br><br>
+                <input class="enter" type="submit" value=""><br><br>
+            </form></td>
+            <td width="50%" style="height: 400px; border-right: 1px ridge black;"><form action="#" th:action="@{/clientLogin}" method="POST" modelAttribute="client">
+                <input  class="Login" style="background-color:transparent;" placeholder="Username" type="text" name="userClient" path="userClient"/><br>
+                <br><br>
+                <input class="Login" style="background-color:transparent;" placeholder="Password" type="password" name="passClient" path="passClient"/><br>
+
+                <br><br>
+                <input class="enter" type="submit" value=""><br><br>
+            </form></td>
+        </tr>
+    </table>
+</body>
+</html>

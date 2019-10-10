@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html class="portfolioSlider" lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Global Urban Strategies Inc. - Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <!-- Link Swiper's CSS -->
+    <link th:href="@{/css/swiper.min.css}" rel="stylesheet" />
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <link th:href="@{/css/menu.css}" rel="stylesheet" />
+    <link th:href="@{/css/portfolioSlider.css}" rel="stylesheet" />
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css'>
+
+    <!-- Demo styles -->
+    <style>
+        body {
+            background: #fff;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color:#000;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body class="portfolioSlider">
+    <form action="#" th:action="@{/GlobalUrban/#portfolio} ">
+        <input class="Back" type="submit" value="" />
+    </form>
+    <section class="swiper-container loading">
+        <div class="swiper-wrapper">
+            <a href="#municipality"><div class="swiper-slide" id="swiper-muni1"></div></a>
+            <div class="swiper-slide" id="swiper-muni2"></div>
+            <div class="swiper-slide" id="swiper-muni3"></div>
+            <div class="swiper-slide" id="swiper-muni4"></div>
+            <div class="swiper-slide" id="swiper-muni5"></div>
+            <div class="swiper-slide" id="swiper-muni6"></div>
+            <div class="swiper-slide" id="swiper-muni7"></div>
+            <div class="swiper-slide" id="swiper-muni8"></div>
+
+            <!--CORPORATE DESIGN-->
+             <a href="#corporate"><div class="swiper-slide" id="swiper-corpo1"></div></a>
+             <div class="swiper-slide" id="swiper-corpo2"></div>
+             <div class="swiper-slide" id="swiper-corpo3"></div>
+             <div class="swiper-slide" id="swiper-corpo4"></div>
+             <div class="swiper-slide" id="swiper-corpo5"></div>
+             <div class="swiper-slide" id="swiper-corpo6"></div>
+             <div class="swiper-slide" id="swiper-corpo7-1"></div>
+             <div class="swiper-slide" id="swiper-corpo7-2"></div>
+             <div class="swiper-slide" id="swiper-corpo8"></div>
+             <div class="swiper-slide" id="swiper-corpo9-1"></div>
+             <div class="swiper-slide" id="swiper-corpo9-2"></div>
+             <div class="swiper-slide" id="swiper-corpo10"></div>
+
+            <!--PUBLIC POLICY-->
+            <a href="#policy"><div class="swiper-slide" id="swiper-policy1"></div></a>
+            <div class="swiper-slide" id="swiper-policy2"></div>
+            <div class="swiper-slide" id="swiper-policy3"></div>
+
+            <!--CORPORATE EVENTS-->
+            <a href="#events"><div class="swiper-slide" id="swiper-events1"></div></a>
+            <div class="swiper-slide" id="swiper-events2"></div>
+            <div class="swiper-slide" id="swiper-events3"></div>
+            <div class="swiper-slide" id="swiper-events4"></div>
+            <div class="swiper-slide" id="swiper-events5"></div>
+            <div class="swiper-slide" id="swiper-events6"></div>
+            <div class="swiper-slide" id="swiper-events7"></div>
+            <div class="swiper-slide" id="swiper-events8"></div>
+            <div class="swiper-slide" id="swiper-events9"></div>
+            <div class="swiper-slide" id="swiper-events10"></div>
+
+                 <div class="swiper-slide" id="none" style="background-image:url(https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLWTdaX3J5b1VueDg)">
+                     <img src="https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLWTdaX3J5b1VueDg" class="entity-img" />
+                     <div class="content">
+                         <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7">Alexis Berry</p>
+                         <span class="caption" data-swiper-parallax="-20%">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+                     </div>
+                 </div>
+
+             </div>
+
+             <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev swiper-button-white"></div>
+        <div class="swiper-button-next swiper-button-white"></div>
+    </section>
+<!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js'></script>
+    <script th:src="@{/css/js/script.js}"></script>
+
+<!-- Swiper JS -->
+    <script th:src="@{/css/js/swiper.min.js}"></script>
+
+</body>
+</html>

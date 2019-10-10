@@ -1,0 +1,121 @@
+textarea:focus {outline:0;}
+textarea#welcomeTa{
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    width: 435px;
+    height: 235px;
+    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+    font-size: 17px;
+}
+textarea#aboutUsTa{
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    width: 630px;
+    height: 390px;
+    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+    font-size: 17px;
+    padding-right: 12rem;
+}
+textarea#servicesTa{
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    width: 100%;
+    text-align: end;
+    height: 275px;
+    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+    font-size: 17px;
+    padding-top: 3rem;
+}
+textarea#GWATa{
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    width: 60%;
+    height: 275px;
+    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+    font-size: 17px;
+}
+textarea#GDMTa{
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    width: 40%;
+    height: 300px;
+    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+    font-size: 17px;
+    display: flex;
+    box-sizing: border-box;
+    margin-left: 5rem;
+    margin-top: -5rem;
+    margin-right: auto;
+}
+textarea#SEETa{
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    width: 100%;
+    height: 350px;
+    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+    font-size: 17px;
+    display: flex;
+    box-sizing: border-box;
+    margin-left: -2rem;
+}
+textarea#SEE2Ta{
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    width: 100%;
+    height: 350px;
+    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+    font-size: 17px;
+    display: flex;
+    box-sizing: border-box;
+}
+textarea#GAE1Ta{
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    width: 100%;
+    height: 300px;
+    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+    font-size: 17px;
+    display: flex;
+    margin-top: -12rem;
+}
+textarea#GAE2Ta{
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    width: 30%;
+    height: 150px;
+    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+    font-size: 17px;
+    display: flex;
+    box-sizing: border-box;
+    margin-top: -25rem;
+    margin-left: auto;
+    margin-right: 5rem;
+}
+input.save{
+    background-image: url(images/Save.png);
+    background-repeat: no-repeat;
+    width: 140px;
+    height: 60px;
+    background-color: transparent;
+    border: 0;
+    display: flex;
+    margin-left: auto;
+}
+div.newClientConfirm{
+    background-color:rgba(192,192,192,0.2);
+    width: 50%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
