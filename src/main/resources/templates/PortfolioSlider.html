@@ -6,10 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
     <!-- Link Swiper's CSS -->
-    <link th:href="@{/css/swiper.min.css}" rel="stylesheet" />
     <link th:href="@{/css/style.css}" rel="stylesheet" />
-    <link th:href="@{/css/menu.css}" rel="stylesheet" />
-    <link th:href="@{/css/portfolioSlider.css}" rel="stylesheet" />
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
@@ -28,12 +25,12 @@
     </style>
 </head>
 <body class="portfolioSlider">
-    <form action="#" th:action="@{/GlobalUrban/#portfolio} ">
+    <form action="#" th:action="@{/#portfolio} ">
         <input class="Back" type="submit" value="" />
     </form>
     <section class="swiper-container loading">
         <div class="swiper-wrapper">
-            <a href="#municipality"><div class="swiper-slide" id="swiper-muni1"></div></a>
+            <div class="swiper-slide" id="swiper-muni1"></div>
             <div class="swiper-slide" id="swiper-muni2"></div>
             <div class="swiper-slide" id="swiper-muni3"></div>
             <div class="swiper-slide" id="swiper-muni4"></div>
@@ -43,7 +40,7 @@
             <div class="swiper-slide" id="swiper-muni8"></div>
 
             <!--CORPORATE DESIGN-->
-             <a href="#corporate"><div class="swiper-slide" id="swiper-corpo1"></div></a>
+             <div class="swiper-slide" id="swiper-corpo1"></div>
              <div class="swiper-slide" id="swiper-corpo2"></div>
              <div class="swiper-slide" id="swiper-corpo3"></div>
              <div class="swiper-slide" id="swiper-corpo4"></div>
@@ -57,12 +54,12 @@
              <div class="swiper-slide" id="swiper-corpo10"></div>
 
             <!--PUBLIC POLICY-->
-            <a href="#policy"><div class="swiper-slide" id="swiper-policy1"></div></a>
+            <div class="swiper-slide" id="swiper-policy1"></div>
             <div class="swiper-slide" id="swiper-policy2"></div>
             <div class="swiper-slide" id="swiper-policy3"></div>
 
             <!--CORPORATE EVENTS-->
-            <a href="#events"><div class="swiper-slide" id="swiper-events1"></div></a>
+            <div class="swiper-slide" id="swiper-events1"></div>
             <div class="swiper-slide" id="swiper-events2"></div>
             <div class="swiper-slide" id="swiper-events3"></div>
             <div class="swiper-slide" id="swiper-events4"></div>
@@ -71,15 +68,9 @@
             <div class="swiper-slide" id="swiper-events7"></div>
             <div class="swiper-slide" id="swiper-events8"></div>
             <div class="swiper-slide" id="swiper-events9"></div>
-            <div class="swiper-slide" id="swiper-events10"></div>
+            <div class="swiper-slide" id="swiper-events10"><img /></div>
 
-                 <div class="swiper-slide" id="none" style="background-image:url(https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLWTdaX3J5b1VueDg)">
-                     <img src="https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLWTdaX3J5b1VueDg" class="entity-img" />
-                     <div class="content">
-                         <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7">Alexis Berry</p>
-                         <span class="caption" data-swiper-parallax="-20%">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
-                     </div>
-                 </div>
+
 
              </div>
 

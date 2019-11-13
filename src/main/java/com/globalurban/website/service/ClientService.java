@@ -9,4 +9,6 @@ public interface ClientService {
     List<Client> findAll();
     public Client save(Client client) throws DataAccessException;
     public Boolean findByClientAndPass(String clientUser, String passClient) throws DataAccessException;
+
+    public Client findByClient(String clientUser) throws DataAccessException;
 }

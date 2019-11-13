@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <title>Login - Global Urban</title>
     <link th:href="@{/css/style.css}" rel="stylesheet" />
-    <link th:href="@{/css/menu.css}" rel="stylesheet" />
 </head>
 <body class="login">
     <nav>
-        <a href="#home"><img src="/css/images/LogoGUS-04-02.png"/></a>
+        <a href="#home"><img src="/GlobalUrban/css/images/LogoGUS-04-02.png"/></a>
 
         <ul>
             <li data-menuanchor="home" class="active">
@@ -29,14 +28,14 @@
         </ul>
     </nav>
 
-    <form action="#" th:action="@{/GlobalUrban/} ">
+    <form action="#" th:action="@{/} ">
         <input class="Back" type="submit" value="" />
     </form>
 
     <table style="width:100%">
         <tr>
-            <th><img src="/css/images/Admin.jpg"/></th>
-            <th><img src="/css/images/Client.jpg"/></th>
+            <th><img src="/GlobalUrban/css/images/Admin.jpg"/></th>
+            <th><img src="/GlobalUrban/css/images/Client.jpg"/></th>
         </tr>
         <tr align="center">
             <td width="50%" style="height: 400px; border-right: 1px ridge white;"><form action="#" th:action="@{/adminLogin}" method="POST" modelAttribute="administrator">

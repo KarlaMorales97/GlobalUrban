@@ -16,6 +16,9 @@ public class Client {
     @Column(name = "passclient")
     private String passClient;
 
+    @Column(name = "companyname")
+    public String companyname;
+
     public Long getIdclient() {
         return idclient;
     }
@@ -38,5 +41,13 @@ public class Client {
 
     public void setPassClient(String passClient) {
         this.passClient = passClient;
+    }
+
+    public String getCompanyname() {
+        return companyname;
+    }
+
+    public void setCompanyname(String companyname) {
+        this.companyname = companyname;
     }
 }

@@ -21,7 +21,9 @@ public class ClientController {
     String loginClient(Model model, Client client){
         if(clientService.findByClientAndPass(client.getUserClient(),client.getPassClient())){
             model.addAttribute("inf", informationService.findAll());
-            return "administratorSite";
+            System.out.println(clientService.findByClient(client.getUserClient()).getCompanyname());
+            model.addAttribute("clientName",clientService.findByClient(client.getUserClient()));
+            return "client/indexClient";
         }
         return "administrator";
     }

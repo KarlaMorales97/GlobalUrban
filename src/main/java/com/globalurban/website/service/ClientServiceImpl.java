@@ -31,4 +31,9 @@ public class ClientServiceImpl implements ClientService{
         }
         return true;
     }
+
+    @Override
+    public Client findByClient(String clientUser) throws DataAccessException {
+        return clientRepository.findByUserClient(clientUser);
+    }
 }

@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <title>Administrator Site - Global Urban</title>
     <link th:href="@{/css/style.css}" rel="stylesheet" />
-    <link th:href="@{/css/styleAdmin.css}" rel="stylesheet" />
-    <link th:href="@{/css/menu.css}" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.js"></script>
 </head>
     <body>
     <nav>
-        <a href="#home"><img src="/css/images/LogoGUS-04-02.png"/></a>
+        <a href="#home"><img src="/GlobalUrban/css/images/LogoGUS-04-02.png"/></a>
 
         <ul>
             <li data-menuanchor="welcome" class="active">
@@ -36,11 +34,11 @@
     <div id="fullpage">
         <!--SLIDE 1/HOME-->
         <video autoplay muted loop id="videoHome">
-            <source src="/css/video/HomeVideo.mp4" type="video/mp4">
+            <source src="css/video/HomeVideo.mp4" type="video/mp4">
         </video>
 
         <nav>
-            <a href="#home"><img src="/css/images/LogoGUS-04-02.png"/></a>
+            <a href="#home"><img src="/GlobalUrban/css/images/LogoGUS-04-02.png"/></a>
 
             <ul>
                 <li data-menuanchor="welcome" class="active">
@@ -68,7 +66,7 @@
 
             <div class="section " id="section0">
                 <h1>WELCOME TO ADMINISTRATOR SITE</h1>
-                <form action="#" th:action="@{/GlobalUrban/}">
+                <form action="#" th:action="@{/}">
                     <p><input type="submit" value="LOG OUT" />
                 </form>
             </div>
@@ -164,7 +162,7 @@
                             </table>
                         </td>
                         <td width="50%; height: 60px">
-                            <img id="servicesSlides" src="/css/images/ServicesSlide.jpg"/>
+                            <img id="servicesSlides" src="/GlobalUrban/css/images/ServicesSlide.jpg"/>
                             <li class="admin" th:each="inf : ${inf}">
                                 <form action="#" th:action="@{/infoEdit} " method="POST" modelAttribute="information">
 
@@ -193,8 +191,28 @@
             </div>
             <!--SLIDE 5/ PORTFOLIO-->
             <div class="section " id="section4">
-                <h1>SLIDE PORTFOLIO</h1>
-                <!--SLIDE 6/ CONTACT US-->
+                <li class="admin" th:each="inf : ${inf}">
+                    <form action="#" th:action="@{/infoEdit} " method="POST" modelAttribute="information">
+
+                        <textarea th:text="${inf.welcome}" style="display:none;" name="welcome" th:inline="text"></textarea><br>
+                        <textarea th:text="${inf.aboutus}" style="display:none;" name="aboutus" th:inline="text"></textarea><br>
+                        <textarea th:text="${inf.grantwriadmin}" style="display:none;" name="grantwriadmin" th:inline="text"></textarea><br>
+                        <textarea th:text="${inf.graphicdesign}" style="display:none;" name="graphicdesign" th:inline="text"></textarea><br>
+                        <textarea th:text="${inf.graphicdesignTwo}" style="display:none;" name="graphicdesignTwo" th:inline="text"></textarea><br>
+                        <textarea th:text="${inf.goverenti}" style="display:none;" name="goverenti" th:inline="text"></textarea><br>
+                        <textarea th:text="${inf.goverti2}" style="display:none;" name="goverenti2" th:inline="text"></textarea><br>
+                        <textarea th:text="${inf.outeducation}" style="display:none;" name="outeducation" th:inline="text"></textarea><br>
+                        <textarea th:text="${inf.introservice}" style="display:none;" name="introservice" th:inline="text"></textarea>
+
+                        <textarea th:text="${inf.gaewwwu}" style="display:none;" name="gaewwu" th:inline="text"></textarea>
+                        <textarea th:text="${inf.gdmwwwu}" style="display:none;" name="gdmwwu" th:inline="text"></textarea>
+                        <textarea th:text="${inf.seewwwu}" style="display:none;" name="seewwu" th:inline="text"></textarea>
+                        <textarea th:text="${inf.gwawwwu}" style="display:none;" name="gwawwu" th:inline="text"></textarea>
+
+                        <textarea id="servicesTa" th:text="${inf.introportfolio}" type="text" name="introportfolio" th:inline="text"></textarea>
+                        <input type="submit" class="save" value="" />
+                    </form>
+                </li>
             </div>
             <div class="section " id="section5">
                 <h1>SLIDE CONTACT US</h1>

@@ -2,11 +2,9 @@
 <html class="SEE" lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Global Urban</title>
     <link th:href="@{/css/style.css}" rel="stylesheet" />
-
-    <link th:href="@{/css/services.css}" rel="stylesheet" />
-    <link th:href="@{/css/menu.css}" rel="stylesheet" />
 
     <link rel="stylesheet" th:href="@{/css/video-js.css}">
     <script th:src="@{/css/js/video.js}"></script>
@@ -15,8 +13,8 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.js"></script>
 </head>
-<body class="SEE">
-<form action="#" th:action="@{/GlobalUrban/#services} ">
+<body class="SEE repeat">
+<form action="#" th:action="@{/#services} ">
     <input class="Back" type="submit" value="" />
 </form>
 
@@ -24,14 +22,14 @@
 
 <table class="woPadding" style="width:90%" align="center">
     <tr>
-        <td width="50%" rowspan="3">
+        <td class="cincuenta" rowspan="3">
             <div id="SEEtext">
-                <pre><p th:each="i: ${inf}" th:text="${i.outeducation}"></p></pre>
+                <pre><p class="seeFont" th:each="i: ${inf}" th:text="${i.outeducation}"></p></pre>
             </div>
         </td>
-        <td width="50%" rowspan="3">
+        <td class="cincuenta" rowspan="3">
             <div id="SEE2text">
-                <pre><p th:each="i: ${inf}" th:text="${i.graphicdesignTwo}"></p></pre>
+                <pre><p class="seeFont" th:each="i: ${inf}" th:text="${i.graphicdesignTwo}"></p></pre>
             </div>
         </td>
     </tr>

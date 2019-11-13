@@ -2,21 +2,16 @@
 <html class="notPadding" lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Global Urban</title>
     <link th:href="@{/css/style.css}" rel="stylesheet" />
-
-    <link th:href="@{/css/services.css}" rel="stylesheet" />
-    <link th:href="@{/css/menu.css}" rel="stylesheet" />
-
-    <link rel="stylesheet" th:href="@{/css/video-js.css}">
-    <script th:src="@{/css/js/video.js}"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.js"></script>
 </head>
 <body class="notPadding">
-        <form action="#" th:action="@{/GlobalUrban/#services} ">
+        <form action="#" th:action="@{/#services} ">
             <input class="Back" type="submit" value="" />
         </form>
 
@@ -28,7 +23,7 @@
                     <img id="icon1GWA" src="/css/images/services/Icon1GWA.png"/>
                 </td>
                 <td width="85%" rowspan="3">
-                    <pre><p th:each="i: ${inf}" th:text="${i.grantwriadmin}"></p></pre>
+                    <pre class="alignRight"><p th:each="i: ${inf}" th:text="${i.grantwriadmin}"></p></pre>
                 </td>
             </tr>
             <tr>
@@ -40,7 +35,7 @@
         </table>
 
         <form action="#" th:action="@{/GWA/gwawwu}">
-            <p><input class="next" id="nextgwawwu" type="submit" value=""/>
+            <input class="next" id="nextgwawwu" type="submit" value=""/>
         </form>
 </body>
 </html>
